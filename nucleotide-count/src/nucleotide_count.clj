@@ -11,4 +11,4 @@
 (defn count-of-nucleotide-in-strand [nucleotide strand]
   {:pre [(#{\A \T \C \G} nucleotide)]}
   (nucleotide-counts strand)                                ;just for assertion
-  (count (filter #(= % nucleotide) strand)) )
+  (count (filter #(= % nucleotide) strand)))

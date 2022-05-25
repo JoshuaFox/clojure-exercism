@@ -8,10 +8,10 @@
 (deftest list-add-test
   (is (= '("JavaScript" "Java" "Lisp" "Clojure")
          (-> (tracks-on-tracks-on-tracks/new-list)
-              (tracks-on-tracks-on-tracks/add-language "Clojure")
-              (tracks-on-tracks-on-tracks/add-language "Lisp")
-              (tracks-on-tracks-on-tracks/add-language "Java")
-              (tracks-on-tracks-on-tracks/add-language "JavaScript")))))
+             (tracks-on-tracks-on-tracks/add-language "Clojure")
+             (tracks-on-tracks-on-tracks/add-language "Lisp")
+             (tracks-on-tracks-on-tracks/add-language "Java")
+             (tracks-on-tracks-on-tracks/add-language "JavaScript")))))
 
 (deftest first-test
   (is (= "Lisp" (tracks-on-tracks-on-tracks/first-language '("Lisp" "Clojure")))))

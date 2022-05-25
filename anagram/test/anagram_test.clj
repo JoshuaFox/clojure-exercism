@@ -23,7 +23,7 @@
 (deftest multiple-anagrams
   (is (= ["gallery" "regally" "largely"]
          (let [coll ["gallery" "ballerina" "regally"
-                     "clergy"  "largely"   "leading"]]
+                     "clergy" "largely" "leading"]]
            (anagram/anagrams-for "allergy" coll)))))
 
 (deftest case-insensitive-anagrams

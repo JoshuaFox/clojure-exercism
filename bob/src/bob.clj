@@ -7,8 +7,7 @@
                               (Character/isUpperCase ^Character c)))
                         s)
         somecaps (some #(Character/isUpperCase ^Character %)
-                       s)
-        ]
+                       s)]
     (and somecaps allcaps)))
 (defn question? [s]
   (= \? (last s)))

@@ -4,6 +4,4 @@
   "Count the differences between them.
   An attempt to calculate it between sequences of different lengths should not work."
   (when (= (count strand1) (count strand2))
-        (count (filter false? (map = strand1 strand2))
-          ;(filter #(not= (first %) (second %)) (partition 2 (interleave strand1 strand2)))
-          )))
+    (count (filter false? (map = strand1 strand2)))))

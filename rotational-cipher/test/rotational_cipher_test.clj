@@ -1,6 +1,6 @@
 (ns rotational-cipher-test
-  (:require  [clojure.test :refer [deftest is testing]]
-             rotational-cipher))
+  (:require [clojure.test :refer [deftest is testing]]
+            rotational-cipher))
 
 (deftest rotate-a-by-1
   (is (= (rotational-cipher/rotate "a" 1) "b")))
@@ -39,7 +39,7 @@
   (is (= (rotational-cipher/rotate "B" -28) "Z")))
 
 (deftest rotate-forward-then-backwards-same-number-of-steps
-  (is (=  (rotational-cipher/rotate
+  (is (= (rotational-cipher/rotate
            (rotational-cipher/rotate "B" 28) -28) "B")))
 
 (deftest rotate-all-letters

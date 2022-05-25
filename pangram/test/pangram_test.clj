@@ -10,13 +10,13 @@
 
 (deftest missing-character-x
   (is
-   (false?
-    (pangram? "a quick movement of the enemy will jeopardize five gunboats"))))
+    (false?
+      (pangram? "a quick movement of the enemy will jeopardize five gunboats"))))
 
 (deftest another-missing-character-x
   (is
-   (false?
-    (pangram? "the quick brown fish jumps over the lazy dog"))))
+    (false?
+      (pangram? "the quick brown fish jumps over the lazy dog"))))
 
 (deftest with-underscores
   (is (pangram? "the_quick_brown_fox_jumps_over_the_lazy_dog")))
@@ -26,13 +26,13 @@
 
 (deftest missing-letters-replaced-by-numbers
   (is
-   (false?
-    (pangram? "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"))))
+    (false?
+      (pangram? "7h3 qu1ck brown fox jumps ov3r 7h3 lazy dog"))))
 
 (deftest mixed-case-and-punctuation
   (is (pangram? "\"Five quacking Zephyrs jolt my wax bed.\"")))
 
 (deftest upper-and-lower-not-counted-separately
   (is
-   (false?
-    (pangram? "the quick brown fox jumps over with lazy FX"))))
+    (false?
+      (pangram? "the quick brown fox jumps over with lazy FX"))))

@@ -18,6 +18,5 @@
   (is (= "UGCACCAGAAUU" (rna-transcription/to-rna "ACGTGGTCTTAA"))))
 
 (deftest it-validates-dna-strands
-  (is (thrown? AssertionError (rna-transcription/to-rna "XCGFGGTDTTAA")))
- )
+  (is (thrown? AssertionError (rna-transcription/to-rna "XCGFGGTDTTAA"))))
 

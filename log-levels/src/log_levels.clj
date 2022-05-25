@@ -9,15 +9,13 @@
    "
   [s]
   (let [before-trim (re-find #"(?<=\[[A-Z]+\]\:).*" s)]
-    (if before-trim (str/trim before-trim) ""))
-  )
+    (if before-trim (str/trim before-trim) "")))
 
 (defn log-level
   "Takes a string representing a log line
    and returns its level in lower-case."
   [s]
-  (str/lower-case(re-find #"(?<=\[)[A-Z]+(?=]:)" s))
-  )
+  (str/lower-case (re-find #"(?<=\[)[A-Z]+(?=]:)" s)))
 
 (defn reformat
   "Takes a string representing a log line and formats it
@@ -25,5 +23,4 @@
   [s]
   (let [lvl (log-level s)
         msg (message s)]
-    (str msg " (" lvl ")"))
-  )
+    (str msg " (" lvl ")")))

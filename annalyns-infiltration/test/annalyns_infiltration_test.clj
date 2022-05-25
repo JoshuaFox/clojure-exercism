@@ -48,76 +48,76 @@
 
 (deftest signal-prisoner-archer-awake-prisoner-sleeping-test
   (testing "Cannot signal prisoner if archer is awake and prisoner is sleeping"
-      (is (= false (annalyns-infiltration/can-signal-prisoner? true false)))))
+    (is (= false (annalyns-infiltration/can-signal-prisoner? true false)))))
 
 (deftest signal-prisoner-both-sleeping-test
   (testing "Cannot signal prisoner if archer and prisoner are both sleeping"
-      (is (= false (annalyns-infiltration/can-signal-prisoner? false false)))))
+    (is (= false (annalyns-infiltration/can-signal-prisoner? false false)))))
 
 (deftest signal-prisoner-both-awake-test
   (testing "Cannot signal prisoner if archer and prisoner are both awake"
-      (is (= false (annalyns-infiltration/can-signal-prisoner? true true)))))
+    (is (= false (annalyns-infiltration/can-signal-prisoner? true true)))))
 
 (deftest release-prisoner-everyone-awake-dog-present-test
   (testing "Cannot release prisoner if everyone is awake and pet dog is present"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true true true true)))))
+    (is (= false (annalyns-infiltration/can-free-prisoner? true true true true)))))
 
 (deftest release-prisoner-everyone-awake-dog-absent-test
-    (testing "Cannot release prisoner if everyone is awake and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true true true false)))))
-    
+  (testing "Cannot release prisoner if everyone is awake and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? true true true false)))))
+
 (deftest release-prisoner-everyone-asleep-dog-absent-test
-    (testing "Cannot release prisoner if everyone is asleep and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? false false false false)))))
+  (testing "Cannot release prisoner if everyone is asleep and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? false false false false)))))
 
 (deftest release-prisoner-archer-awake-dog-present-test
-    (testing "Cannot release prisoner if only archer is awake and pet dog is present"
-      (is (= false (annalyns-infiltration/can-free-prisoner? false true false true)))))
+  (testing "Cannot release prisoner if only archer is awake and pet dog is present"
+    (is (= false (annalyns-infiltration/can-free-prisoner? false true false true)))))
 
 (deftest release-prisoner-archer-awake-dog-absent-test
-    (testing "Cannot release prisoner if only archer is awake and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? false true false false)))))
+  (testing "Cannot release prisoner if only archer is awake and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? false true false false)))))
 
 (deftest release-prisoner-knight-awake-dog-absent-test
-    (testing "Cannot release prisoner if only knight is awake and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true false false false)))))
+  (testing "Cannot release prisoner if only knight is awake and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? true false false false)))))
 
 (deftest release-prisoner-knight-awake-dog-present-test
-    (testing "Cannot release prisoner if only knight is asleep and pet dog is present"
-      (is (= false (annalyns-infiltration/can-free-prisoner? false true true true)))))
+  (testing "Cannot release prisoner if only knight is asleep and pet dog is present"
+    (is (= false (annalyns-infiltration/can-free-prisoner? false true true true)))))
 
 (deftest release-prisoner-knight-asleep-dog-absent-test
-    (testing "Cannot release prisoner if only knight is asleep and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? false true true false)))))
+  (testing "Cannot release prisoner if only knight is asleep and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? false true true false)))))
 
 (deftest release-prisoner-archer-asleep-dog-absent-test
-    (testing "Cannot release prisoner if only archer is asleep and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true false true false)))))
+  (testing "Cannot release prisoner if only archer is asleep and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? true false true false)))))
 
 (deftest release-prisoner-prisoner-asleep-dog-present-test
-    (testing "Cannot release prisoner if only prisoner is asleep and pet dog is present"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true true false true)))))
+  (testing "Cannot release prisoner if only prisoner is asleep and pet dog is present"
+    (is (= false (annalyns-infiltration/can-free-prisoner? true true false true)))))
 
 (deftest release-prisoner-prisoner-asleep-dog-absent-test
-    (testing "Cannot release prisoner if only prisoner is asleep and pet dog is absent"
-      (is (= false (annalyns-infiltration/can-free-prisoner? true true false false)))))
+  (testing "Cannot release prisoner if only prisoner is asleep and pet dog is absent"
+    (is (= false (annalyns-infiltration/can-free-prisoner? true true false false)))))
 
 (deftest release-prisoner-everyone-asleep-dog-present-test
-    (testing "Can release prisoner if everyone is asleep and pet dog is present"
-      (is (= true (annalyns-infiltration/can-free-prisoner? false false false true)))))
+  (testing "Can release prisoner if everyone is asleep and pet dog is present"
+    (is (= true (annalyns-infiltration/can-free-prisoner? false false false true)))))
 
 (deftest release-prisoner-prisoner-awake-dog-present-test
-    (testing "Can release prisoner if only prisoner is awake and pet dog is present"
-      (is (= true (annalyns-infiltration/can-free-prisoner? false false true true)))))
+  (testing "Can release prisoner if only prisoner is awake and pet dog is present"
+    (is (= true (annalyns-infiltration/can-free-prisoner? false false true true)))))
 
 (deftest release-prisoner-prisoner-awake-dog-absent-test
-    (testing "Can release prisoner if only prisoner is awake and pet dog is absent"
-      (is (= true (annalyns-infiltration/can-free-prisoner? false false true false)))))
+  (testing "Can release prisoner if only prisoner is awake and pet dog is absent"
+    (is (= true (annalyns-infiltration/can-free-prisoner? false false true false)))))
 
 (deftest release-prisoner-knight-awake-dog-present-test
-    (testing "Can release prisoner if only knight is awake and pet dog is present"
-      (is (= true (annalyns-infiltration/can-free-prisoner? true false false true)))))
+  (testing "Can release prisoner if only knight is awake and pet dog is present"
+    (is (= true (annalyns-infiltration/can-free-prisoner? true false false true)))))
 
 (deftest release-prisoner-archer-asleep-dog-present-test
-    (testing "Can release prisoner if only archer is asleep and pet dog is present"
-      (is (= true (annalyns-infiltration/can-free-prisoner? true false true true)))))
+  (testing "Can release prisoner if only archer is asleep and pet dog is present"
+    (is (= true (annalyns-infiltration/can-free-prisoner? true false true true)))))

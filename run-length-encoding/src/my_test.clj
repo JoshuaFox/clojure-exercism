@@ -1,4 +1,3 @@
-
 (ns my-test
   (:require [clojure.test :refer [deftest is run-tests]]))
 

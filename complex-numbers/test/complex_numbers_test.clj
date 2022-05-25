@@ -145,9 +145,8 @@
   ;  (is (= (c/exp  [1 0] )
   ;         [(/ Math/E 0.0)])))
   (testing "exp i"
-    (is (= (c/exp  [0 1] )
+    (is (= (c/exp [0 1])
            [0 0])))
   (testing "exp 0"
-    (is (= (c/exp  [0 0] )
-           [0 0])))
-  )
+    (is (= (c/exp [0 0])
+           [0 0]))))
