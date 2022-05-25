@@ -1,9 +1,6 @@
 (ns protein-translation
   (:require [clojure.string :as str]))
 
-
-
-
 (defn line-to-map [line]
   (->
     line
